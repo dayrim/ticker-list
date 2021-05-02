@@ -24,7 +24,7 @@ const bootstrap = async () => {
   ReactDOM.render(
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <App />
         </BrowserRouter>
       </ThemeProvider>

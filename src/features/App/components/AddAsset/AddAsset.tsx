@@ -70,7 +70,6 @@ const AddAsset = ({ isOpen = false, onClose }: PropTypes) => {
                             <DialogContent className={classes.addAssetContent}>
                                 <ErrorTooltip title={errors.asset}>
                                     <Autocomplete
-                                        id="city_id"
                                         options={availableAssets}
                                         autoComplete
                                         onChange={(e, asset) => setFieldValue("asset", asset || initialValues.asset)}
