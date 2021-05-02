@@ -1,9 +1,10 @@
 import packageJson from "../../package.json";
 
 const version = packageJson.version || 0;
-const PREFIX = `POSTCARD_EDITOR::${version}::`;
+const appName = packageJson.name || 0;
+const PREFIX = `${appName}::${version}::`;
 
-export function set<T = object>(key: string, value: T): void {
+export const set = <T = object>(key: string, value: T): void => {
   if (!localStorage) {
     return;
   }
@@ -14,9 +15,9 @@ export function set<T = object>(key: string, value: T): void {
   } catch (error) {
     throw new Error("store serialization failed");
   }
-}
+};
 
-export function get<T = object>(key: string): T | undefined {
+export const get = <T = object>(key: string): T | undefined => {
   if (!localStorage) {
     return;
   }
@@ -30,4 +31,4 @@ export function get<T = object>(key: string): T | undefined {
   } catch (error) {
     throw new Error("store deserialization failed");
   }
-}
+};

@@ -1,7 +1,7 @@
-import * as imagesAPI from "./images-api.client";
-import * as localStorage from "./local-storage.client";
+import * as ExchangeAPI from "./exchange-api.client";
+import * as LocalStorage from "./local-storage.client";
 
 export default {
-  imagesAPI,
-  localStorage
+  ExchangeAPI,
+  LocalStorage,
 };
